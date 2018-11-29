@@ -13,9 +13,20 @@ svg.append("circle")
   .attr("r", radius)
   .attr("fill", "royalblue");
 
+svg.append("text")
+  .attr("x", 65)
+  .attr("y", 30)
+  .text("I am a ball!");
+
 d3.select("circle")
   .transition()
   .duration(1500)
   .ease(d3.easeBounce)
   .attr("cy", height - radius);
+
+d3.select("text")
+  .transition()
+  .duration(1500)
+  .ease(d3.easeBounce)
+  .attr("y", height - radius);
 
